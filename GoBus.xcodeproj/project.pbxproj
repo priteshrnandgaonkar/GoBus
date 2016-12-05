@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4EF1DF5E091006F16CC /* AppDelegate.swift */; };
+		212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4F11DF5E091006F16CC /* ViewController.swift */; };
+		212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F31DF5E091006F16CC /* Main.storyboard */; };
+		212AB4F71DF5E091006F16CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F61DF5E091006F16CC /* Assets.xcassets */; };
+		212AB4FA1DF5E091006F16CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F81DF5E091006F16CC /* LaunchScreen.storyboard */; };
+		212AB5051DF5E092006F16CC /* GoBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB5041DF5E092006F16CC /* GoBusTests.swift */; };
+		212AB5101DF5E092006F16CC /* GoBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB50F1DF5E092006F16CC /* GoBusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		212AB5011DF5E092006F16CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 212AB4E41DF5E091006F16CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 212AB4EB1DF5E091006F16CC;
+			remoteInfo = GoBus;
+		};
+		212AB50C1DF5E092006F16CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 212AB4E41DF5E091006F16CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 212AB4EB1DF5E091006F16CC;
+			remoteInfo = GoBus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		212AB4EC1DF5E091006F16CC /* GoBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		212AB4EF1DF5E091006F16CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		212AB4F11DF5E091006F16CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		212AB4F41DF5E091006F16CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		212AB4F61DF5E091006F16CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		212AB4F91DF5E091006F16CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		212AB4FB1DF5E091006F16CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212AB5001DF5E092006F16CC /* GoBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		212AB5041DF5E092006F16CC /* GoBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBusTests.swift; sourceTree = "<group>"; };
+		212AB5061DF5E092006F16CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212AB50B1DF5E092006F16CC /* GoBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		212AB50F1DF5E092006F16CC /* GoBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBusUITests.swift; sourceTree = "<group>"; };
+		212AB5111DF5E092006F16CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		212AB4E91DF5E091006F16CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB4FD1DF5E092006F16CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB5081DF5E092006F16CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		212AB4E31DF5E091006F16CC = {
+			isa = PBXGroup;
+			children = (
+				212AB4EE1DF5E091006F16CC /* GoBus */,
+				212AB5031DF5E092006F16CC /* GoBusTests */,
+				212AB50E1DF5E092006F16CC /* GoBusUITests */,
+				212AB4ED1DF5E091006F16CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		212AB4ED1DF5E091006F16CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				212AB4EC1DF5E091006F16CC /* GoBus.app */,
+				212AB5001DF5E092006F16CC /* GoBusTests.xctest */,
+				212AB50B1DF5E092006F16CC /* GoBusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		212AB4EE1DF5E091006F16CC /* GoBus */ = {
+			isa = PBXGroup;
+			children = (
+				212AB4EF1DF5E091006F16CC /* AppDelegate.swift */,
+				212AB4F11DF5E091006F16CC /* ViewController.swift */,
+				212AB4F31DF5E091006F16CC /* Main.storyboard */,
+				212AB4F61DF5E091006F16CC /* Assets.xcassets */,
+				212AB4F81DF5E091006F16CC /* LaunchScreen.storyboard */,
+				212AB4FB1DF5E091006F16CC /* Info.plist */,
+			);
+			path = GoBus;
+			sourceTree = "<group>";
+		};
+		212AB5031DF5E092006F16CC /* GoBusTests */ = {
+			isa = PBXGroup;
+			children = (
+				212AB5041DF5E092006F16CC /* GoBusTests.swift */,
+				212AB5061DF5E092006F16CC /* Info.plist */,
+			);
+			path = GoBusTests;
+			sourceTree = "<group>";
+		};
+		212AB50E1DF5E092006F16CC /* GoBusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				212AB50F1DF5E092006F16CC /* GoBusUITests.swift */,
+				212AB5111DF5E092006F16CC /* Info.plist */,
+			);
+			path = GoBusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		212AB4EB1DF5E091006F16CC /* GoBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 212AB5141DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBus" */;
+			buildPhases = (
+				212AB4E81DF5E091006F16CC /* Sources */,
+				212AB4E91DF5E091006F16CC /* Frameworks */,
+				212AB4EA1DF5E091006F16CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoBus;
+			productName = GoBus;
+			productReference = 212AB4EC1DF5E091006F16CC /* GoBus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		212AB4FF1DF5E092006F16CC /* GoBusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 212AB5171DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusTests" */;
+			buildPhases = (
+				212AB4FC1DF5E092006F16CC /* Sources */,
+				212AB4FD1DF5E092006F16CC /* Frameworks */,
+				212AB4FE1DF5E092006F16CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				212AB5021DF5E092006F16CC /* PBXTargetDependency */,
+			);
+			name = GoBusTests;
+			productName = GoBusTests;
+			productReference = 212AB5001DF5E092006F16CC /* GoBusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		212AB50A1DF5E092006F16CC /* GoBusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 212AB51A1DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusUITests" */;
+			buildPhases = (
+				212AB5071DF5E092006F16CC /* Sources */,
+				212AB5081DF5E092006F16CC /* Frameworks */,
+				212AB5091DF5E092006F16CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				212AB50D1DF5E092006F16CC /* PBXTargetDependency */,
+			);
+			name = GoBusUITests;
+			productName = GoBusUITests;
+			productReference = 212AB50B1DF5E092006F16CC /* GoBusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		212AB4E41DF5E091006F16CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Pritesh Nandgaonkar";
+				TargetAttributes = {
+					212AB4EB1DF5E091006F16CC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TB2282VDLT;
+						ProvisioningStyle = Automatic;
+					};
+					212AB4FF1DF5E092006F16CC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TB2282VDLT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 212AB4EB1DF5E091006F16CC;
+					};
+					212AB50A1DF5E092006F16CC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TB2282VDLT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 212AB4EB1DF5E091006F16CC;
+					};
+				};
+			};
+			buildConfigurationList = 212AB4E71DF5E091006F16CC /* Build configuration list for PBXProject "GoBus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 212AB4E31DF5E091006F16CC;
+			productRefGroup = 212AB4ED1DF5E091006F16CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				212AB4EB1DF5E091006F16CC /* GoBus */,
+				212AB4FF1DF5E092006F16CC /* GoBusTests */,
+				212AB50A1DF5E092006F16CC /* GoBusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		212AB4EA1DF5E091006F16CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212AB4FA1DF5E091006F16CC /* LaunchScreen.storyboard in Resources */,
+				212AB4F71DF5E091006F16CC /* Assets.xcassets in Resources */,
+				212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB4FE1DF5E092006F16CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB5091DF5E092006F16CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		212AB4E81DF5E091006F16CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */,
+				212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB4FC1DF5E092006F16CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212AB5051DF5E092006F16CC /* GoBusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		212AB5071DF5E092006F16CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212AB5101DF5E092006F16CC /* GoBusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		212AB5021DF5E092006F16CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 212AB4EB1DF5E091006F16CC /* GoBus */;
+			targetProxy = 212AB5011DF5E092006F16CC /* PBXContainerItemProxy */;
+		};
+		212AB50D1DF5E092006F16CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 212AB4EB1DF5E091006F16CC /* GoBus */;
+			targetProxy = 212AB50C1DF5E092006F16CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		212AB4F31DF5E091006F16CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				212AB4F41DF5E091006F16CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		212AB4F81DF5E091006F16CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				212AB4F91DF5E091006F16CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		212AB5121DF5E092006F16CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		212AB5131DF5E092006F16CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		212AB5151DF5E092006F16CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		212AB5161DF5E092006F16CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		212AB5181DF5E092006F16CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBus.app/GoBus";
+			};
+			name = Debug;
+		};
+		212AB5191DF5E092006F16CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoBus.app/GoBus";
+			};
+			name = Release;
+		};
+		212AB51B1DF5E092006F16CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GoBus;
+			};
+			name = Debug;
+		};
+		212AB51C1DF5E092006F16CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = TB2282VDLT;
+				INFOPLIST_FILE = GoBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GoBus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		212AB4E71DF5E091006F16CC /* Build configuration list for PBXProject "GoBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212AB5121DF5E092006F16CC /* Debug */,
+				212AB5131DF5E092006F16CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		212AB5141DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212AB5151DF5E092006F16CC /* Debug */,
+				212AB5161DF5E092006F16CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		212AB5171DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212AB5181DF5E092006F16CC /* Debug */,
+				212AB5191DF5E092006F16CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		212AB51A1DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212AB51B1DF5E092006F16CC /* Debug */,
+				212AB51C1DF5E092006F16CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 212AB4E41DF5E091006F16CC /* Project object */;
+}
