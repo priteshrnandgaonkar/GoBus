@@ -14,6 +14,10 @@
 		212AB4FA1DF5E091006F16CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F81DF5E091006F16CC /* LaunchScreen.storyboard */; };
 		212AB5051DF5E092006F16CC /* GoBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB5041DF5E092006F16CC /* GoBusTests.swift */; };
 		212AB5101DF5E092006F16CC /* GoBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB50F1DF5E092006F16CC /* GoBusUITests.swift */; };
+		212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB5241DF5E65D006F16CC /* BusStop.swift */; };
+		212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB5291DF5F96A006F16CC /* Gloss.framework */; };
+		212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */; };
+		212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52F1DF60727006F16CC /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		212AB50B1DF5E092006F16CC /* GoBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		212AB50F1DF5E092006F16CC /* GoBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBusUITests.swift; sourceTree = "<group>"; };
 		212AB5111DF5E092006F16CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212AB5241DF5E65D006F16CC /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusStop.swift; path = Models/BusStop.swift; sourceTree = "<group>"; };
+		212AB5291DF5F96A006F16CC /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
+		212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireGloss.framework; path = Carthage/Build/iOS/AlamofireGloss.framework; sourceTree = "<group>"; };
+		212AB52F1DF60727006F16CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */,
+				212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */,
+				212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 				212AB5031DF5E092006F16CC /* GoBusTests */,
 				212AB50E1DF5E092006F16CC /* GoBusUITests */,
 				212AB4ED1DF5E091006F16CC /* Products */,
+				212AB51D1DF5E4B5006F16CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +109,7 @@
 		212AB4EE1DF5E091006F16CC /* GoBus */ = {
 			isa = PBXGroup;
 			children = (
+				212AB5231DF5E638006F16CC /* Models */,
 				212AB4EF1DF5E091006F16CC /* AppDelegate.swift */,
 				212AB4F11DF5E091006F16CC /* ViewController.swift */,
 				212AB4F31DF5E091006F16CC /* Main.storyboard */,
@@ -125,6 +138,24 @@
 			path = GoBusUITests;
 			sourceTree = "<group>";
 		};
+		212AB51D1DF5E4B5006F16CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				212AB52F1DF60727006F16CC /* Alamofire.framework */,
+				212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */,
+				212AB5291DF5F96A006F16CC /* Gloss.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		212AB5231DF5E638006F16CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				212AB5241DF5E65D006F16CC /* BusStop.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +166,7 @@
 				212AB4E81DF5E091006F16CC /* Sources */,
 				212AB4E91DF5E091006F16CC /* Frameworks */,
 				212AB4EA1DF5E091006F16CC /* Resources */,
+				212AB5201DF5E4CA006F16CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,11 +289,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		212AB5201DF5E4CA006F16CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireGloss.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		212AB4E81DF5E091006F16CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */,
 				212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */,
 				212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */,
 			);
@@ -364,6 +416,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -406,6 +459,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -416,11 +470,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TB2282VDLT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GoBus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,11 +488,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TB2282VDLT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GoBus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PN.GoBus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -514,6 +578,7 @@
 				212AB5161DF5E092006F16CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		212AB5171DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +587,7 @@
 				212AB5191DF5E092006F16CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		212AB51A1DF5E092006F16CC /* Build configuration list for PBXNativeTarget "GoBusUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +596,7 @@
 				212AB51C1DF5E092006F16CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
