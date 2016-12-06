@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212208711DF7172D003BE293 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212208701DF7172D003BE293 /* LocationFetcher.swift */; };
+		212208751DF73615003BE293 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212208741DF73615003BE293 /* SVProgressHUD.framework */; };
+		212208771DF737A3003BE293 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212208761DF737A3003BE293 /* Utility.swift */; };
+		212208791DF73C35003BE293 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212208781DF73C35003BE293 /* CoreLocation.framework */; };
 		212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4EF1DF5E091006F16CC /* AppDelegate.swift */; };
 		212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4F11DF5E091006F16CC /* ViewController.swift */; };
 		212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F31DF5E091006F16CC /* Main.storyboard */; };
@@ -18,6 +22,8 @@
 		212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB5291DF5F96A006F16CC /* Gloss.framework */; };
 		212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */; };
 		212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52F1DF60727006F16CC /* Alamofire.framework */; };
+		21826B581DF745DB00B70E5F /* albateen.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B571DF745DB00B70E5F /* albateen.gpx */; };
+		21826B5A1DF7466F00B70E5F /* abudhabi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B591DF7466F00B70E5F /* abudhabi.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212208701DF7172D003BE293 /* LocationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFetcher.swift; path = Utility/LocationFetcher.swift; sourceTree = "<group>"; };
+		212208741DF73615003BE293 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		212208761DF737A3003BE293 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
+		212208781DF73C35003BE293 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		212AB4EC1DF5E091006F16CC /* GoBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		212AB4EF1DF5E091006F16CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212AB4F11DF5E091006F16CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +65,8 @@
 		212AB5291DF5F96A006F16CC /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
 		212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireGloss.framework; path = Carthage/Build/iOS/AlamofireGloss.framework; sourceTree = "<group>"; };
 		212AB52F1DF60727006F16CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		21826B571DF745DB00B70E5F /* albateen.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = albateen.gpx; sourceTree = "<group>"; };
+		21826B591DF7466F00B70E5F /* abudhabi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abudhabi.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212208791DF73C35003BE293 /* CoreLocation.framework in Frameworks */,
 				212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */,
 				212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */,
+				212208751DF73615003BE293 /* SVProgressHUD.framework in Frameworks */,
 				212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,9 +99,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2122086F1DF71711003BE293 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				212208701DF7172D003BE293 /* LocationFetcher.swift */,
+				212208761DF737A3003BE293 /* Utility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		212AB4E31DF5E091006F16CC = {
 			isa = PBXGroup;
 			children = (
+				21826B591DF7466F00B70E5F /* abudhabi.gpx */,
+				21826B571DF745DB00B70E5F /* albateen.gpx */,
 				212AB4EE1DF5E091006F16CC /* GoBus */,
 				212AB5031DF5E092006F16CC /* GoBusTests */,
 				212AB50E1DF5E092006F16CC /* GoBusUITests */,
@@ -109,6 +134,7 @@
 		212AB4EE1DF5E091006F16CC /* GoBus */ = {
 			isa = PBXGroup;
 			children = (
+				2122086F1DF71711003BE293 /* Utility */,
 				212AB5231DF5E638006F16CC /* Models */,
 				212AB4EF1DF5E091006F16CC /* AppDelegate.swift */,
 				212AB4F11DF5E091006F16CC /* ViewController.swift */,
@@ -141,6 +167,8 @@
 		212AB51D1DF5E4B5006F16CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				212208781DF73C35003BE293 /* CoreLocation.framework */,
+				212208741DF73615003BE293 /* SVProgressHUD.framework */,
 				212AB52F1DF60727006F16CC /* Alamofire.framework */,
 				212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */,
 				212AB5291DF5F96A006F16CC /* Gloss.framework */,
@@ -268,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				212AB4FA1DF5E091006F16CC /* LaunchScreen.storyboard in Resources */,
+				21826B581DF745DB00B70E5F /* albateen.gpx in Resources */,
 				212AB4F71DF5E091006F16CC /* Assets.xcassets in Resources */,
+				21826B5A1DF7466F00B70E5F /* abudhabi.gpx in Resources */,
 				212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +329,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireGloss.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			outputPaths = (
 			);
@@ -313,8 +344,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212208771DF737A3003BE293 /* Utility.swift in Sources */,
 				212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */,
 				212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */,
+				212208711DF7172D003BE293 /* LocationFetcher.swift in Sources */,
 				212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
