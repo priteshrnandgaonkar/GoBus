@@ -11,31 +11,10 @@ import Foundation
 import Gloss
 import MapKit
 
-//
-//struct Location: Decodable {
-//    let latitude: Double
-//    let longitude: Double
-//    
-//    init?(json: JSON) {
-//        guard let tuple = Decoder.decodeLocation(from: json, key: "coordinates") else {
-//            return nil
-//        }
-//        (latitude, longitude) = tuple
-//    }
-//}
-//
-//extension Decoder {
-//    static func decodeLocation(from json:JSON, key: String) -> (Double, Double)? {
-//        guard let coordinates: [Double] = json[key] as? [Double], coordinates.count == 2 else {
-//            return nil
-//        }
-//        return (coordinates[0], coordinates[1])
-//    }
-//}
-
-class BusStop: NSObject, MKAnnotation, Decodable {
+class BusStop: NSObject, Decodable {
     let name: String
     let id: String
+    let subtitle: String?
     let coordinate: CLLocationCoordinate2D
     
     required init?(json: JSON) {
@@ -49,14 +28,21 @@ class BusStop: NSObject, MKAnnotation, Decodable {
         guard  let location: CLLocationCoordinate2D = Decoder.decodeLocation(from: "location" <~~ json, key: "coordinates") else {
             return nil
         }
-        
+        self.subtitle = "busStopId" <~~ json
         self.name = name
         self.id = id
         self.coordinate = location
+        super.init()
     }
     
     override var description: String {
         return "name: \(name)" + "-" + "lat: \(coordinate.latitude)" + " long: \(coordinate.longitude)"
+    }
+}
+
+extension BusStop: MKAnnotation {
+    var title: String? {
+        return name
     }
 }
 
@@ -65,6 +51,6 @@ extension Decoder {
         guard let json = json, let coordinates: [Double] = json[key] as? [Double], coordinates.count == 2 else {
             return nil
         }
-        return CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
+        return CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
     }
 }
