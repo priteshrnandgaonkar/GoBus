@@ -11,6 +11,7 @@ import UIKit
 import MapKit
 import Alamofire
 import Gloss
+import SVProgressHUD
 
 class BusDetailViewController: UIViewController {
     
@@ -33,6 +34,8 @@ class BusDetailViewController: UIViewController {
     
     func updateViewWith(routeFor bus: Bus) {
         
+        SVProgressHUD.show(withStatus: "Fetching Route...")
+
         fetchRoute(forBus: bus, with: {[weak self] (result: Result<[CLLocationCoordinate2D], NetworkError>) in
             
             guard let weakSelf = self else {
@@ -48,11 +51,13 @@ class BusDetailViewController: UIViewController {
     }
     
     func updateMapWithRoutes() {
+        
         guard let polyLine = bus.polyLine else {
             return
         }
         mapView.add(polyLine)
         mapView.setVisibleMapRect(polyLine.boundingMapRect, animated: true)
+        SVProgressHUD.dismiss()
 
     }
     
