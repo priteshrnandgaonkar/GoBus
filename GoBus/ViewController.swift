@@ -110,24 +110,25 @@ extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if let annotation = annotation as? BusStop {
-            
             let identifier = "pin"
             var view: MKAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-                 { // 2
+                 {
                 view = dequeuedView
             } else {
-                // 3
                 view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             }
             view.canShowCallout = true
             view.image = UIImage(named: "bus-stop")
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type:.detailDisclosure) as UIView
-
             view.annotation = annotation
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print("Tapped: \(view.annotation)")
     }
 }
