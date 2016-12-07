@@ -157,6 +157,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-dr-5dx">
                                 <rect key="frame" x="0.0" y="20" width="375" height="447"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D1s-Lj-QOj" id="hL0-0f-J37"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-Zk-Y4H">
                                 <rect key="frame" x="16" y="483" width="51" height="23"/>

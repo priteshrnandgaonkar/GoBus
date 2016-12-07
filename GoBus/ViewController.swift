@@ -20,12 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "GoBus"
         fetchCurrentLocation()
         // Drop a pin
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
     }
     
     func fetchCurrentLocation() {
@@ -113,7 +110,7 @@ extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if let annotation = annotation as? BusStop {
-            let identifier = "pin"
+            let identifier = "bus-stop"
             var view: MKAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
                  {

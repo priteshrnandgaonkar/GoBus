@@ -20,8 +20,14 @@ class Bus: NSObject, Decodable {
     let direction: String
     var route: [CLLocationCoordinate2D]?
     
+    var polyLine: MKPolyline? {
+        guard let uRoute = route else {
+            return nil
+        }
+        return MKPolyline(coordinates:uRoute, count: uRoute.count)
+    }
+    
     required init?(json: JSON) {
-
         guard let id: Int = "id" <~~ json else {
             return nil
         }
