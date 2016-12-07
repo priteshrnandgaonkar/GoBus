@@ -14,6 +14,10 @@ protocol ErrorMessage {
     var errorMessage: String { get }
 }
 
+protocol ErrorHandling {
+    func handle<T : ErrorMessage>(error: T?, withRetryBlock retryBlock: @escaping () -> ())
+}
+
 struct Utility {
     static func showAlertViewController(withTitle title: String, message: String?, buttonTitle: String, cancelButtonTitle: String, buttonAction: @escaping (()->())) -> UIAlertController {
         
@@ -36,7 +40,14 @@ extension UIStoryboard {
     }
 }
 
-extension UIViewController {
+extension UIViewController: ErrorHandling {
+    
+    func handle<T : ErrorMessage>(error: T?, withRetryBlock retryBlock: @escaping () -> ()) {
+        let message = error?.errorMessage
+        let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { retryBlock() })
+        present(controller, animated: true, completion: nil)
+ 
+    }
     
     static func instantiateViewController<T: UIViewController>(with identifier: String) -> T {
         return UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: identifier) as! T

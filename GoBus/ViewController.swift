@@ -14,7 +14,7 @@ import SVProgressHUD
 
 class ViewController: UIViewController {
 
-    let initialLocation = CLLocationCoordinate2D(latitude: 24.4702, longitude: 54.3726)
+    var currentLocation = CLLocationCoordinate2D(latitude: 24.4702, longitude: 54.3726)
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -36,9 +36,10 @@ class ViewController: UIViewController {
             switch result {
             case .success(let coordinates):
                 // FIXME
-                weakSelf.updateMapWithBusStops(at: weakSelf.initialLocation)
+//                weakSelf.currentLocation = coordinates
+                weakSelf.updateMapWithBusStops(at: weakSelf.currentLocation)
             case .failure(let error):
-                weakSelf.handle(error: error)
+                weakSelf.handle(error: error, withRetryBlock: { weakSelf.fetchCurrentLocation() })
             }
         }
     }
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
                 weakSelf.mapView.showAnnotations(busStops, animated: true)
                 
             case .failure(let error):
-                weakSelf.handle(error: error)
+                weakSelf.handle(error: error, withRetryBlock: { weakSelf.updateMapWithBusStops(at: weakSelf.currentLocation)})
             }
         })
     }
@@ -95,14 +96,14 @@ class ViewController: UIViewController {
         })
     }
     
-    func handle<T: ErrorMessage>(error: T?) {
-        let message = error?.errorMessage
-        let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { [weak self] in
-            self?.fetchCurrentLocation()
-        })
-        present(controller, animated: true, completion: nil)
-    }
-    
+//    func handle<T: ErrorMessage>(error: T? withRetryBlock:() -> ()) {
+//        let message = error?.errorMessage
+//        let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { [weak self] in
+//            self?.fetchCurrentLocation()
+//        })
+//        present(controller, animated: true, completion: nil)
+//    }
+//    
     func centerMapOnLocation(location: CLLocationCoordinate2D) {
 
         let regionRadius: CLLocationDistance = 1000

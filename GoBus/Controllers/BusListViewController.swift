@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AlamofireGloss
+import SVProgressHUD
 import Alamofire
 
 class BusListViewController: UIViewController {
@@ -31,21 +32,49 @@ class BusListViewController: UIViewController {
     
     func fetchBuses(from busStop: BusStop){
         
-        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/\(busStop.id)/buses").responseArray(Bus.self) { [weak self](response) in
+        SVProgressHUD.show(withStatus: "Fetching Buses...")
+        
+        NetworkUtility.getJSONArray(url: "http://54.255.135.90/busservice/api/v1/bus-stops/\(busStop.id)/buses", withCompletion: ({ [weak self, weak busStop]
+        (result: Result<[JSON], NetworkError>) in
+
+            SVProgressHUD.dismiss()
             
             guard let weakSelf = self else {
                 return
             }
             
-            switch response.result {
-            case .success(let buses):
+            switch result {
+            case .success(let array):
+                guard let buses = [Bus].from(jsonArray: array) else {
+                    return
+                }
                 weakSelf.updateTable(with: buses)
             case .failure(let error):
-//                if let error = error as? AFError {
-//                }
-                print(error)
+                guard let weakBusStop = busStop else {
+                    return
+                }
+                weakSelf.handle(error: error, withRetryBlock: { weakSelf.fetchBuses(from: weakBusStop) })
             }
-        }
+
+        }))
+//        
+//        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/\(busStop.id)/buses").responseArray(Bus.self) { [weak self](response) in
+//            
+//            SVProgressHUD.dismiss()
+//            
+//            guard let weakSelf = self else {
+//                return
+//            }
+//            
+//            switch response.result {
+//            case .success(let buses):
+//                weakSelf.updateTable(with: buses)
+//            case .failure(let error):
+////                if let error = error as? AFError {
+////                }
+//                print(error)
+//            }
+//        }
     }
     
     func updateTable(with buses: [Bus]) {
