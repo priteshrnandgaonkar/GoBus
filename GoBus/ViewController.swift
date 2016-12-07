@@ -66,23 +66,37 @@ class ViewController: UIViewController {
         })
     }
     
-    func getNearbyBusStops(from coordinate: CLLocationCoordinate2D, with completion:@escaping (Result<[BusStop], AFError>) -> ()) {
+    func getNearbyBusStops(from coordinate: CLLocationCoordinate2D, with completion:@escaping (Result<[BusStop], NetworkError>) -> ()) {
+                
+//        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/radius?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500").responseArray(BusStop.self) { (response) in
+//            
+//            switch response.result {
+//            case .success(let busStops):
+//                completion(Result.success(busStops))
+//            case .failure(let error):
+//                if let error = error as? AFError {
+//                    completion(Result.failure(error))
+//                }
+//            }
+//        }
         
-        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/radius?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500").responseArray(BusStop.self) { (response) in
+        NetworkUtility.getJSONArray(url: "http://54.255.135.90/busservice/api/v1/bus-stops/radius?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500", withCompletion: { (result: Result<[JSON], NetworkError>) in
             
-            switch response.result {
-            case .success(let busStops):
+            switch result {
+            case .success(let array):
+                guard let busStops = [BusStop].from(jsonArray: array) else {
+                    completion(Result.failure(NetworkError.parsingError))
+                    return
+                }
                 completion(Result.success(busStops))
             case .failure(let error):
-                if let error = error as? AFError {
-                    completion(Result.failure(error))
-                }
+                completion(Result.failure(error))
             }
-        }
+        })
     }
     
-    func handle(error: Error?) {
-        let message = error?.localizedDescription
+    func handle<T: ErrorMessage>(error: T?) {
+        let message = error?.errorMessage
         let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { [weak self] in
             self?.fetchCurrentLocation()
         })
@@ -106,7 +120,6 @@ class ViewController: UIViewController {
 
 extension ViewController: MKMapViewDelegate {
     
-     //1
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if let annotation = annotation as? BusStop {
@@ -136,7 +149,5 @@ extension ViewController: MKMapViewDelegate {
         let vc: BusListViewController = UIViewController.instantiateViewController(with: "BusListViewController")
         vc.busStop = busStop
         navigationController?.pushViewController(vc, animated: true)
-        
-        print("Tapped: \(busStop)")
     }
 }

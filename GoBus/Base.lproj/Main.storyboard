@@ -167,8 +167,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-uR-whR">
-                                <rect key="frame" x="16" y="526" width="91" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Destination: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-uR-whR">
+                                <rect key="frame" x="16" y="526" width="92" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -227,24 +227,25 @@
                         <constraints>
                             <constraint firstItem="59j-qb-5CP" firstAttribute="leading" secondItem="iOT-uR-whR" secondAttribute="leading" id="28G-1a-F51"/>
                             <constraint firstItem="rua-4r-WL3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zPr-Zk-Y4H" secondAttribute="trailing" constant="8" id="43s-cB-dfM"/>
+                            <constraint firstItem="xBr-V9-lVp" firstAttribute="top" secondItem="iOT-uR-whR" secondAttribute="top" id="6cZ-3q-jDN"/>
                             <constraint firstItem="0FP-pi-xqB" firstAttribute="leading" secondItem="rFC-pS-h6h" secondAttribute="leading" id="75r-pR-Rhm"/>
                             <constraint firstItem="iOT-uR-whR" firstAttribute="leading" secondItem="zPr-Zk-Y4H" secondAttribute="leading" id="7lk-gs-Bab"/>
                             <constraint firstItem="xBr-V9-lVp" firstAttribute="leading" secondItem="rFC-pS-h6h" secondAttribute="leading" id="9c4-8c-hrl"/>
                             <constraint firstItem="rua-4r-WL3" firstAttribute="centerY" secondItem="zPr-Zk-Y4H" secondAttribute="centerY" id="AUR-2T-Z6l"/>
+                            <constraint firstItem="xBr-V9-lVp" firstAttribute="leading" secondItem="iOT-uR-whR" secondAttribute="trailing" constant="8" id="H7s-be-vMT"/>
                             <constraint firstItem="bEl-Cy-18m" firstAttribute="centerY" secondItem="oVi-7G-abW" secondAttribute="centerY" id="IUZ-4R-bRV"/>
                             <constraint firstItem="oVi-7G-abW" firstAttribute="leading" secondItem="Ngi-ov-g5c" secondAttribute="leading" id="LzY-y5-vng"/>
                             <constraint firstAttribute="trailing" secondItem="rua-4r-WL3" secondAttribute="trailing" constant="16" id="OFT-qw-vhA"/>
                             <constraint firstItem="zPr-Zk-Y4H" firstAttribute="top" secondItem="bQ2-dr-5dx" secondAttribute="bottom" constant="16" id="PIK-o9-tuC"/>
-                            <constraint firstItem="xBr-V9-lVp" firstAttribute="centerY" secondItem="iOT-uR-whR" secondAttribute="centerY" id="R1y-Xl-2FE"/>
                             <constraint firstItem="bQ2-dr-5dx" firstAttribute="leading" secondItem="p3S-du-JKX" secondAttribute="leading" id="RTQ-Ly-Mnv"/>
                             <constraint firstItem="zPr-Zk-Y4H" firstAttribute="leading" secondItem="p3S-du-JKX" secondAttribute="leading" constant="16" id="SVr-2l-Bgr"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bEl-Cy-18m" secondAttribute="trailing" constant="8" id="TZh-TX-IFe"/>
                             <constraint firstItem="0FP-pi-xqB" firstAttribute="centerY" secondItem="Ngi-ov-g5c" secondAttribute="centerY" id="VBF-aI-bIz"/>
-                            <constraint firstItem="rFC-pS-h6h" firstAttribute="centerY" secondItem="59j-qb-5CP" secondAttribute="centerY" id="VGt-6W-fUD"/>
                             <constraint firstItem="iOT-uR-whR" firstAttribute="top" secondItem="zPr-Zk-Y4H" secondAttribute="bottom" constant="20" id="Z0u-dS-OS1"/>
                             <constraint firstItem="oVi-7G-abW" firstAttribute="top" secondItem="0FP-pi-xqB" secondAttribute="bottom" constant="8" id="aNs-UX-uNR"/>
                             <constraint firstItem="bQ2-dr-5dx" firstAttribute="top" secondItem="fcx-K8-uDB" secondAttribute="bottom" id="cox-DJ-fKj"/>
                             <constraint firstItem="59j-qb-5CP" firstAttribute="top" secondItem="xBr-V9-lVp" secondAttribute="bottom" constant="8" id="cuV-9f-URB"/>
+                            <constraint firstItem="rFC-pS-h6h" firstAttribute="top" secondItem="59j-qb-5CP" secondAttribute="top" id="hU5-GG-WkC"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="xBr-V9-lVp" secondAttribute="trailing" constant="8" id="iRL-mo-pzh"/>
                             <constraint firstItem="bEl-Cy-18m" firstAttribute="leading" secondItem="0FP-pi-xqB" secondAttribute="leading" id="k2H-cK-FSI"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rFC-pS-h6h" secondAttribute="trailing" constant="8" id="m5V-5H-JTE"/>

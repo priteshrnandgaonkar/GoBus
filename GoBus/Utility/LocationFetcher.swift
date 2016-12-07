@@ -19,7 +19,7 @@ class LocationFetcher: NSObject {
     let locationManager: CLLocationManager
     static let sharedInstance: LocationFetcher = LocationFetcher()
     
-    enum LocationError: Error {
+    enum LocationError: Error, ErrorMessage {
         case locationUnknown
         case permissionDenied
         case network
@@ -38,19 +38,18 @@ class LocationFetcher: NSObject {
             }
         }
         
-        var errorDescription: String {
+        var errorMessage: String {
             var errorString = ""
             switch self {
             case .locationUnknown:
-                errorString = "Unknown Location"
+                errorString = "Unknown Location, Are you on Mars :P"
             case .permissionDenied:
-                errorString = "Permission Denied"
+                errorString = "Pls allow GoBus to access your location. Move to settings and give location access"
             case .network:
-                errorString = "Network Error"
+                errorString = "Network Error, Seems like your mobile isn't connected to internet"
             default:
                 errorString = "Internal Error"
             }
-            
             return errorString
         }
     }

@@ -40,7 +40,6 @@ class BusListViewController: UIViewController {
             switch response.result {
             case .success(let buses):
                 weakSelf.updateTable(with: buses)
-                print("Buses: \(buses)")
             case .failure(let error):
 //                if let error = error as? AFError {
 //                }

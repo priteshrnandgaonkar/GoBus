@@ -63,6 +63,7 @@ class BusDetailViewController: UIViewController {
     
     
     func fetchRoute(forBus bus: Bus, with completion:@escaping (Result<[CLLocationCoordinate2D], NetworkError>) -> ()) {
+        
         Alamofire.request("http://54.255.135.90/busservice/api/v1/buses/\(bus.id)/route").responseJSON {(dataResponse: DataResponse<Any>) in
             
             if let error = NetworkError.init(with: dataResponse) {
