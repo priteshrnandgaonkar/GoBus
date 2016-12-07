@@ -9,6 +9,33 @@
 import Foundation
 import UIKit
 import MapKit
+import Alamofire
+
+enum NetworkError: Error {
+    case noData
+    case noResponse
+    case statusCode(Int)
+    case parsingError
+    case unKnowError
+    
+    init?(with dataResponse: DataResponse<Any>) {
+        guard let _ = dataResponse.data else {
+            self = .noData
+            return
+        }
+        guard let response = dataResponse.response else {
+            self = .noResponse
+            return
+        }
+        
+        let statusCode = response.statusCode
+        guard statusCode == 200 else {
+            self = .statusCode(statusCode)
+            return
+        }
+        return nil
+    }
+}
 
 struct Utility {
     static func showAlertViewController(withTitle title: String, message: String?, buttonTitle: String, cancelButtonTitle: String, buttonAction: @escaping (()->())) -> UIAlertController {

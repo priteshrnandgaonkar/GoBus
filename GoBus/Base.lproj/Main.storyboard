@@ -182,12 +182,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination Value: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-pS-h6h">
-                                <rect key="frame" x="116" y="553" width="135" height="20"/>
+                                <rect key="frame" x="116" y="554" width="135" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rua-4r-WL3">
-                                <rect key="frame" x="293" y="474" width="50" height="42"/>
+                                <rect key="frame" x="309" y="474" width="50" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="2Zu-Wi-bFh"/>
@@ -198,24 +198,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Id: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-ov-g5c">
-                                <rect key="frame" x="16" y="581" width="54" height="20"/>
+                                <rect key="frame" x="16" y="582" width="54" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus ID Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FP-pi-xqB">
-                                <rect key="frame" x="116" y="581" width="91" height="20"/>
+                                <rect key="frame" x="116" y="582" width="91" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-7G-abW">
-                                <rect key="frame" x="16" y="609" width="70" height="20"/>
+                                <rect key="frame" x="16" y="610" width="70" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEl-Cy-18m">
-                                <rect key="frame" x="116" y="609" width="110" height="20"/>
+                                <rect key="frame" x="116" y="610" width="110" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -230,7 +230,7 @@
                             <constraint firstItem="rua-4r-WL3" firstAttribute="centerY" secondItem="zPr-Zk-Y4H" secondAttribute="centerY" id="AUR-2T-Z6l"/>
                             <constraint firstItem="bEl-Cy-18m" firstAttribute="centerY" secondItem="oVi-7G-abW" secondAttribute="centerY" id="IUZ-4R-bRV"/>
                             <constraint firstItem="oVi-7G-abW" firstAttribute="leading" secondItem="Ngi-ov-g5c" secondAttribute="leading" id="LzY-y5-vng"/>
-                            <constraint firstAttribute="trailing" secondItem="rua-4r-WL3" secondAttribute="trailing" constant="32" id="OFT-qw-vhA"/>
+                            <constraint firstAttribute="trailing" secondItem="rua-4r-WL3" secondAttribute="trailing" constant="16" id="OFT-qw-vhA"/>
                             <constraint firstItem="zPr-Zk-Y4H" firstAttribute="top" secondItem="bQ2-dr-5dx" secondAttribute="bottom" constant="16" id="PIK-o9-tuC"/>
                             <constraint firstItem="xBr-V9-lVp" firstAttribute="centerY" secondItem="iOT-uR-whR" secondAttribute="centerY" id="R1y-Xl-2FE"/>
                             <constraint firstItem="bQ2-dr-5dx" firstAttribute="leading" secondItem="p3S-du-JKX" secondAttribute="leading" id="RTQ-Ly-Mnv"/>
@@ -246,7 +246,6 @@
                             <constraint firstItem="bEl-Cy-18m" firstAttribute="leading" secondItem="0FP-pi-xqB" secondAttribute="leading" id="k2H-cK-FSI"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rFC-pS-h6h" secondAttribute="trailing" constant="8" id="m5V-5H-JTE"/>
                             <constraint firstItem="Ngi-ov-g5c" firstAttribute="top" secondItem="rFC-pS-h6h" secondAttribute="bottom" constant="8" id="mct-4a-YnX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rua-4r-WL3" secondAttribute="trailing" constant="16" id="myg-MW-V1g"/>
                             <constraint firstItem="rFC-pS-h6h" firstAttribute="leading" secondItem="59j-qb-5CP" secondAttribute="trailing" constant="8" id="qED-0P-wdo"/>
                             <constraint firstItem="Ngi-ov-g5c" firstAttribute="leading" secondItem="59j-qb-5CP" secondAttribute="leading" id="qRA-SN-8uT"/>
                             <constraint firstAttribute="trailing" secondItem="bQ2-dr-5dx" secondAttribute="trailing" id="rc2-F3-pbt"/>
