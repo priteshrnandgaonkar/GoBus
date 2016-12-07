@@ -14,15 +14,18 @@ import SVProgressHUD
 
 class ViewController: UIViewController {
 
-    let initialLocation = CLLocationCoordinate2D(latitude: 24.44072, longitude: 54.44392)
+    let initialLocation = CLLocationCoordinate2D(latitude: 24.4702, longitude: 54.3726)
     
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchCurrentLocation()
         // Drop a pin
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     func fetchCurrentLocation() {
@@ -129,6 +132,14 @@ extension ViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("Tapped: \(view.annotation)")
+        
+        guard let busStop = view.annotation as? BusStop else {
+            return
+        }
+        let vc: BusListViewController = UIViewController.instantiateViewController(with: "BusListViewController")
+        vc.busStop = busStop
+        navigationController?.pushViewController(vc, animated: true)
+        
+        print("Tapped: \(busStop)")
     }
 }

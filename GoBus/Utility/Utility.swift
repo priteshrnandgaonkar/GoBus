@@ -25,3 +25,16 @@ struct Utility {
     }
 }
 
+extension UIStoryboard {
+    
+    static var mainStoryBoard: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+}
+
+extension UIViewController {
+    
+    static func instantiateViewController<T: UIViewController>(with identifier: String) -> T {
+        return UIStoryboard.mainStoryBoard.instantiateViewController(withIdentifier: identifier) as! T
+    }
+}

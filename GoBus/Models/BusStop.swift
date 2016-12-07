@@ -22,7 +22,7 @@ class BusStop: NSObject, Decodable {
         guard let name:String = ("name" <~~ json) else {
             return nil
         }
-        guard let id: String = "busStopId" <~~ json else {
+        guard let id: Int = "id" <~~ json else {
             return nil
         }
         guard  let location: CLLocationCoordinate2D = Decoder.decodeLocation(from: "location" <~~ json, key: "coordinates") else {
@@ -30,7 +30,7 @@ class BusStop: NSObject, Decodable {
         }
         self.subtitle = "busStopId" <~~ json
         self.name = name
-        self.id = id
+        self.id = String(id)
         self.coordinate = location
         super.init()
     }

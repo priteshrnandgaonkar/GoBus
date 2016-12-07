@@ -24,6 +24,10 @@
 		212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52F1DF60727006F16CC /* Alamofire.framework */; };
 		212CF4F91DF7E2E500EAB2EE /* NetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF4F81DF7E2E500EAB2EE /* NetworkUtility.swift */; };
 		212CF4FB1DF7F40700EAB2EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212CF4FA1DF7F40700EAB2EE /* MapKit.framework */; };
+		212CF5021DF815AD00EAB2EE /* BusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5011DF815AD00EAB2EE /* BusListViewController.swift */; };
+		212CF5041DF8210500EAB2EE /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5031DF8210500EAB2EE /* Bus.swift */; };
+		212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */; };
+		212CF5091DF8401F00EAB2EE /* BusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */; };
 		21826B581DF745DB00B70E5F /* albateen.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B571DF745DB00B70E5F /* albateen.gpx */; };
 		21826B5A1DF7466F00B70E5F /* abudhabi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B591DF7466F00B70E5F /* abudhabi.gpx */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,10 @@
 		212AB52F1DF60727006F16CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		212CF4F81DF7E2E500EAB2EE /* NetworkUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtility.swift; path = Utility/NetworkUtility.swift; sourceTree = "<group>"; };
 		212CF4FA1DF7F40700EAB2EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		212CF5011DF815AD00EAB2EE /* BusListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusListViewController.swift; path = Controllers/BusListViewController.swift; sourceTree = "<group>"; };
+		212CF5031DF8210500EAB2EE /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bus.swift; path = Models/Bus.swift; sourceTree = "<group>"; };
+		212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusTableViewCell.swift; path = Views/BusTableViewCell.swift; sourceTree = "<group>"; };
+		212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDetailViewController.swift; sourceTree = "<group>"; };
 		21826B571DF745DB00B70E5F /* albateen.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = albateen.gpx; sourceTree = "<group>"; };
 		21826B591DF7466F00B70E5F /* abudhabi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abudhabi.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,10 +148,11 @@
 		212AB4EE1DF5E091006F16CC /* GoBus */ = {
 			isa = PBXGroup;
 			children = (
+				212CF5051DF828CB00EAB2EE /* Views */,
 				2122086F1DF71711003BE293 /* Utility */,
 				212AB5231DF5E638006F16CC /* Models */,
+				212CF4FC1DF8149800EAB2EE /* Controllers */,
 				212AB4EF1DF5E091006F16CC /* AppDelegate.swift */,
-				212AB4F11DF5E091006F16CC /* ViewController.swift */,
 				212AB4F31DF5E091006F16CC /* Main.storyboard */,
 				212AB4F61DF5E091006F16CC /* Assets.xcassets */,
 				212AB4F81DF5E091006F16CC /* LaunchScreen.storyboard */,
@@ -187,8 +196,27 @@
 			isa = PBXGroup;
 			children = (
 				212AB5241DF5E65D006F16CC /* BusStop.swift */,
+				212CF5031DF8210500EAB2EE /* Bus.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		212CF4FC1DF8149800EAB2EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				212AB4F11DF5E091006F16CC /* ViewController.swift */,
+				212CF5011DF815AD00EAB2EE /* BusListViewController.swift */,
+				212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		212CF5051DF828CB00EAB2EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,9 +381,13 @@
 			files = (
 				212208771DF737A3003BE293 /* Utility.swift in Sources */,
 				212CF4F91DF7E2E500EAB2EE /* NetworkUtility.swift in Sources */,
+				212CF5021DF815AD00EAB2EE /* BusListViewController.swift in Sources */,
+				212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */,
+				212CF5091DF8401F00EAB2EE /* BusDetailViewController.swift in Sources */,
 				212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */,
 				212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */,
 				212208711DF7172D003BE293 /* LocationFetcher.swift in Sources */,
+				212CF5041DF8210500EAB2EE /* Bus.swift in Sources */,
 				212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
