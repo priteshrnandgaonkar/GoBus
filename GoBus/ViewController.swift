@@ -68,20 +68,9 @@ class ViewController: UIViewController {
     }
     
     func getNearbyBusStops(from coordinate: CLLocationCoordinate2D, with completion:@escaping (Result<[BusStop], NetworkError>) -> ()) {
-                
-//        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/radius?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500").responseArray(BusStop.self) { (response) in
-//            
-//            switch response.result {
-//            case .success(let busStops):
-//                completion(Result.success(busStops))
-//            case .failure(let error):
-//                if let error = error as? AFError {
-//                    completion(Result.failure(error))
-//                }
-//            }
-//        }
         
-        NetworkUtility.getJSONArray(url: "http://54.255.135.90/busservice/api/v1/bus-stops/radius?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500", withCompletion: { (result: Result<[JSON], NetworkError>) in
+        let url = Constants.baseUrl + Constants.fetchBusStopsApiPath + "?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500"
+        NetworkUtility.getJSONArray(url: url, withCompletion: { (result: Result<[JSON], NetworkError>) in
             
             switch result {
             case .success(let array):
@@ -96,18 +85,9 @@ class ViewController: UIViewController {
         })
     }
     
-//    func handle<T: ErrorMessage>(error: T? withRetryBlock:() -> ()) {
-//        let message = error?.errorMessage
-//        let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { [weak self] in
-//            self?.fetchCurrentLocation()
-//        })
-//        present(controller, animated: true, completion: nil)
-//    }
-//    
     func centerMapOnLocation(location: CLLocationCoordinate2D) {
 
         let regionRadius: CLLocationDistance = 1000
-
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)

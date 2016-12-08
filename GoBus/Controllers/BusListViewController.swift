@@ -34,7 +34,8 @@ class BusListViewController: UIViewController {
         
         SVProgressHUD.show(withStatus: "Fetching Buses...")
         
-        NetworkUtility.getJSONArray(url: "http://54.255.135.90/busservice/api/v1/bus-stops/\(busStop.id)/buses", withCompletion: ({ [weak self, weak busStop]
+        let url = Constants.baseUrl + Constants.fetchBusesApiPath + "/\(busStop.id)/buses"
+        NetworkUtility.getJSONArray(url: url, withCompletion: ({ [weak self, weak busStop]
         (result: Result<[JSON], NetworkError>) in
 
             SVProgressHUD.dismiss()

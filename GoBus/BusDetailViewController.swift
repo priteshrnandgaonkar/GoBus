@@ -66,7 +66,9 @@ class BusDetailViewController: UIViewController {
     
     func fetchRoute(forBus bus: Bus, with completion:@escaping (Result<[CLLocationCoordinate2D], NetworkError>) -> ()) {
         
-        NetworkUtility.getJSON(url: "http://54.255.135.90/busservice/api/v1/buses/\(bus.id)/route", withCompletion: { (result: Result<JSON, NetworkError>) in
+        let url = Constants.baseUrl + Constants.fetchBusRouteApiPath + "/\(bus.id)/route"
+        
+        NetworkUtility.getJSON(url: url, withCompletion: { (result: Result<JSON, NetworkError>) in
             switch result {
             case .success(let json):
             guard let points: [[Double]] = json["points"] as? [[Double]] else {
@@ -79,28 +81,6 @@ class BusDetailViewController: UIViewController {
                 completion(Result.failure(error))
             }
         })
-        
-//        Alamofire.request("http://54.255.135.90/busservice/api/v1/buses/\(bus.id)/route").responseJSON {(dataResponse: DataResponse<Any>) in
-//            
-//            if let error = NetworkError.init(with: dataResponse) {
-//                completion(Result.failure(error))
-//                return
-//            }
-//            do {
-//                let arrayJSON = try JSONSerialization.jsonObject(with: dataResponse.data!, options: JSONSerialization.ReadingOptions.mutableContainers)
-//                
-//                guard let  json = arrayJSON as? JSON, let points: [[Double]] = json["points"] as? [[Double]] else {
-//                    completion(Result.failure(NetworkError.parsingError))
-//                    return
-//                }
-//               let routes =  points.map({ CLLocationCoordinate2D(latitude: $0[1], longitude: $0[0]) })
-//                completion(Result.success(routes))
-//            }
-//            catch {
-//                
-//            }
-//        }
-
     }
     
     func populateView(with bus: Bus) {

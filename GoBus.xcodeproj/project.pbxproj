@@ -11,6 +11,7 @@
 		212208751DF73615003BE293 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212208741DF73615003BE293 /* SVProgressHUD.framework */; };
 		212208771DF737A3003BE293 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212208761DF737A3003BE293 /* Utility.swift */; };
 		212208791DF73C35003BE293 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212208781DF73C35003BE293 /* CoreLocation.framework */; };
+		212A05291DF9BB61003423F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A05281DF9BB61003423F7 /* Constants.swift */; };
 		212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4EF1DF5E091006F16CC /* AppDelegate.swift */; };
 		212AB4F21DF5E091006F16CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4F11DF5E091006F16CC /* ViewController.swift */; };
 		212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F31DF5E091006F16CC /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		212208741DF73615003BE293 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		212208761DF737A3003BE293 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		212208781DF73C35003BE293 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		212A05281DF9BB61003423F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utility/Constants.swift; sourceTree = "<group>"; };
 		212AB4EC1DF5E091006F16CC /* GoBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		212AB4EF1DF5E091006F16CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212AB4F11DF5E091006F16CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				212208701DF7172D003BE293 /* LocationFetcher.swift */,
 				212208761DF737A3003BE293 /* Utility.swift */,
 				212CF4F81DF7E2E500EAB2EE /* NetworkUtility.swift */,
+				212A05281DF9BB61003423F7 /* Constants.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				212208771DF737A3003BE293 /* Utility.swift in Sources */,
+				212A05291DF9BB61003423F7 /* Constants.swift in Sources */,
 				212CF4F91DF7E2E500EAB2EE /* NetworkUtility.swift in Sources */,
 				212CF5021DF815AD00EAB2EE /* BusListViewController.swift in Sources */,
 				212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */,
