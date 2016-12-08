@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             switch result {
             case .success(let coordinates):
                 // FIXME
-                weakSelf.currentLocation = coordinates
+//                weakSelf.currentLocation = coordinates
                 weakSelf.updateMapWithBusStops(at: weakSelf.currentLocation)
             case .failure(let error):
                 weakSelf.handle(error: error, withRetryBlock: { weakSelf.fetchCurrentLocation() })
