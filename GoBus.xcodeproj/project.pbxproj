@@ -28,8 +28,6 @@
 		212CF5041DF8210500EAB2EE /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5031DF8210500EAB2EE /* Bus.swift */; };
 		212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */; };
 		212CF5091DF8401F00EAB2EE /* BusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */; };
-		21826B581DF745DB00B70E5F /* albateen.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B571DF745DB00B70E5F /* albateen.gpx */; };
-		21826B5A1DF7466F00B70E5F /* abudhabi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 21826B591DF7466F00B70E5F /* abudhabi.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +75,6 @@
 		212CF5031DF8210500EAB2EE /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bus.swift; path = Models/Bus.swift; sourceTree = "<group>"; };
 		212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusTableViewCell.swift; path = Views/BusTableViewCell.swift; sourceTree = "<group>"; };
 		212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDetailViewController.swift; sourceTree = "<group>"; };
-		21826B571DF745DB00B70E5F /* albateen.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = albateen.gpx; sourceTree = "<group>"; };
-		21826B591DF7466F00B70E5F /* abudhabi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abudhabi.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +121,6 @@
 		212AB4E31DF5E091006F16CC = {
 			isa = PBXGroup;
 			children = (
-				21826B591DF7466F00B70E5F /* abudhabi.gpx */,
-				21826B571DF745DB00B70E5F /* albateen.gpx */,
 				212AB4EE1DF5E091006F16CC /* GoBus */,
 				212AB5031DF5E092006F16CC /* GoBusTests */,
 				212AB50E1DF5E092006F16CC /* GoBusUITests */,
@@ -331,9 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				212AB4FA1DF5E091006F16CC /* LaunchScreen.storyboard in Resources */,
-				21826B581DF745DB00B70E5F /* albateen.gpx in Resources */,
 				212AB4F71DF5E091006F16CC /* Assets.xcassets in Resources */,
-				21826B5A1DF7466F00B70E5F /* abudhabi.gpx in Resources */,
 				212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
