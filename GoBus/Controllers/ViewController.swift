@@ -34,7 +34,6 @@ class ViewController: UIViewController {
             }
             switch result {
             case .success(let coordinates):
-                // FIXME
                 weakSelf.currentLocation = coordinates
                 weakSelf.updateMapWithBusStops(at: weakSelf.currentLocation)
             case .failure(let error):
@@ -50,8 +49,12 @@ class ViewController: UIViewController {
         dropPin.coordinate = coordinate
         dropPin.title = "You are here"
         mapView.addAnnotation(dropPin)
-        
+
+        SVProgressHUD.show(withStatus: "Fetch Nearby Bustops...")
+
         getNearbyBusStops(from: coordinate, with: { [weak self] result in
+            
+            SVProgressHUD.dismiss()
             
             guard let weakSelf = self else {
                 return

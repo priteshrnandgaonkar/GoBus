@@ -29,13 +29,19 @@ class BusDetailViewController: UIViewController {
         super.viewDidLoad()
         title = "Bus Detail"
         populateView(with: bus)
-        updateViewWith(routeFor: bus)
+        
+        if let _ = bus.route {
+            updateMapWithRoutes()
+        }
+        else {
+            fetchAndupdateViewWith(routeFor: bus)
+        }
     }
     
-    func updateViewWith(routeFor bus: Bus) {
+    func fetchAndupdateViewWith(routeFor bus: Bus) {
         
         SVProgressHUD.show(withStatus: "Fetching Route...")
-
+        
         fetchRoute(forBus: bus, with: {[weak self, weak bus] (result: Result<[CLLocationCoordinate2D], NetworkError>) in
             
             SVProgressHUD.dismiss()
@@ -48,7 +54,7 @@ class BusDetailViewController: UIViewController {
                 weakSelf.updateMapWithRoutes()
             case .failure(let error):
                 weakSelf.handle(error: error, withRetryBlock: { 
-                    weakSelf.updateViewWith(routeFor: weakBus)
+                    weakSelf.fetchAndupdateViewWith(routeFor: weakBus)
                 })
             }
         })
@@ -60,7 +66,7 @@ class BusDetailViewController: UIViewController {
             return
         }
         mapView.add(polyLine)
-        mapView.setVisibleMapRect(polyLine.boundingMapRect, animated: true)
+        mapView.setVisibleMapRect(polyLine.boundingMapRect, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), animated: true)
     }
     
     
