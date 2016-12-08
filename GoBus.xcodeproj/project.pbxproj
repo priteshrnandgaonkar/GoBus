@@ -21,7 +21,6 @@
 		212AB5101DF5E092006F16CC /* GoBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB50F1DF5E092006F16CC /* GoBusUITests.swift */; };
 		212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB5241DF5E65D006F16CC /* BusStop.swift */; };
 		212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB5291DF5F96A006F16CC /* Gloss.framework */; };
-		212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */; };
 		212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212AB52F1DF60727006F16CC /* Alamofire.framework */; };
 		212CF4F91DF7E2E500EAB2EE /* NetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF4F81DF7E2E500EAB2EE /* NetworkUtility.swift */; };
 		212CF4FB1DF7F40700EAB2EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212CF4FA1DF7F40700EAB2EE /* MapKit.framework */; };
@@ -69,7 +68,6 @@
 		212AB5111DF5E092006F16CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		212AB5241DF5E65D006F16CC /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusStop.swift; path = Models/BusStop.swift; sourceTree = "<group>"; };
 		212AB5291DF5F96A006F16CC /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
-		212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireGloss.framework; path = Carthage/Build/iOS/AlamofireGloss.framework; sourceTree = "<group>"; };
 		212AB52F1DF60727006F16CC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		212CF4F81DF7E2E500EAB2EE /* NetworkUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtility.swift; path = Utility/NetworkUtility.swift; sourceTree = "<group>"; };
 		212CF4FA1DF7F40700EAB2EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -86,7 +84,6 @@
 			files = (
 				212CF4FB1DF7F40700EAB2EE /* MapKit.framework in Frameworks */,
 				212208791DF73C35003BE293 /* CoreLocation.framework in Frameworks */,
-				212AB52C1DF6028B006F16CC /* AlamofireGloss.framework in Frameworks */,
 				212AB52A1DF5F96A006F16CC /* Gloss.framework in Frameworks */,
 				212208751DF73615003BE293 /* SVProgressHUD.framework in Frameworks */,
 				212AB5301DF60727006F16CC /* Alamofire.framework in Frameworks */,
@@ -183,7 +180,6 @@
 				212208781DF73C35003BE293 /* CoreLocation.framework */,
 				212208741DF73615003BE293 /* SVProgressHUD.framework */,
 				212AB52F1DF60727006F16CC /* Alamofire.framework */,
-				212AB52B1DF6028B006F16CC /* AlamofireGloss.framework */,
 				212AB5291DF5F96A006F16CC /* Gloss.framework */,
 			);
 			name = Frameworks;
@@ -285,7 +281,7 @@
 				TargetAttributes = {
 					212AB4EB1DF5E091006F16CC = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = J9HRA4G7LQ;
+						DevelopmentTeam = TB2282VDLT;
 						ProvisioningStyle = Automatic;
 					};
 					212AB4FF1DF5E092006F16CC = {
@@ -357,7 +353,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireGloss.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
@@ -538,7 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9HRA4G7LQ;
+				DEVELOPMENT_TEAM = TB2282VDLT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -556,7 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9HRA4G7LQ;
+				DEVELOPMENT_TEAM = TB2282VDLT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

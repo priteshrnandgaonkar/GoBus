@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import AlamofireGloss
 import SVProgressHUD
 import Alamofire
 
@@ -58,24 +57,6 @@ class BusListViewController: UIViewController {
             }
 
         }))
-//        
-//        Alamofire.request("http://54.255.135.90/busservice/api/v1/bus-stops/\(busStop.id)/buses").responseArray(Bus.self) { [weak self](response) in
-//            
-//            SVProgressHUD.dismiss()
-//            
-//            guard let weakSelf = self else {
-//                return
-//            }
-//            
-//            switch response.result {
-//            case .success(let buses):
-//                weakSelf.updateTable(with: buses)
-//            case .failure(let error):
-////                if let error = error as? AFError {
-////                }
-//                print(error)
-//            }
-//        }
     }
     
     func updateTable(with buses: [Bus]) {
