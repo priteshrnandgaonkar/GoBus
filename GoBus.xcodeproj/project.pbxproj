@@ -13,6 +13,7 @@
 		212208791DF73C35003BE293 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212208781DF73C35003BE293 /* CoreLocation.framework */; };
 		212A05291DF9BB61003423F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A05281DF9BB61003423F7 /* Constants.swift */; };
 		212A052B1DF9C39B003423F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A052A1DF9C39B003423F7 /* ViewController.swift */; };
+		212A052D1DF9C4A4003423F7 /* BusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212A052C1DF9C4A4003423F7 /* BusDetailViewController.swift */; };
 		212AB4F01DF5E091006F16CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212AB4EF1DF5E091006F16CC /* AppDelegate.swift */; };
 		212AB4F51DF5E091006F16CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F31DF5E091006F16CC /* Main.storyboard */; };
 		212AB4F71DF5E091006F16CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212AB4F61DF5E091006F16CC /* Assets.xcassets */; };
@@ -27,7 +28,6 @@
 		212CF5021DF815AD00EAB2EE /* BusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5011DF815AD00EAB2EE /* BusListViewController.swift */; };
 		212CF5041DF8210500EAB2EE /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5031DF8210500EAB2EE /* Bus.swift */; };
 		212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */; };
-		212CF5091DF8401F00EAB2EE /* BusDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +54,7 @@
 		212208781DF73C35003BE293 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		212A05281DF9BB61003423F7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utility/Constants.swift; sourceTree = "<group>"; };
 		212A052A1DF9C39B003423F7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		212A052C1DF9C4A4003423F7 /* BusDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusDetailViewController.swift; path = Controllers/BusDetailViewController.swift; sourceTree = "<group>"; };
 		212AB4EC1DF5E091006F16CC /* GoBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		212AB4EF1DF5E091006F16CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		212AB4F41DF5E091006F16CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		212CF5011DF815AD00EAB2EE /* BusListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusListViewController.swift; path = Controllers/BusListViewController.swift; sourceTree = "<group>"; };
 		212CF5031DF8210500EAB2EE /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bus.swift; path = Models/Bus.swift; sourceTree = "<group>"; };
 		212CF5061DF828E700EAB2EE /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusTableViewCell.swift; path = Views/BusTableViewCell.swift; sourceTree = "<group>"; };
-		212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,7 @@
 			children = (
 				212A052A1DF9C39B003423F7 /* ViewController.swift */,
 				212CF5011DF815AD00EAB2EE /* BusListViewController.swift */,
-				212CF5081DF8401F00EAB2EE /* BusDetailViewController.swift */,
+				212A052C1DF9C4A4003423F7 /* BusDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -373,8 +373,8 @@
 				212A05291DF9BB61003423F7 /* Constants.swift in Sources */,
 				212CF4F91DF7E2E500EAB2EE /* NetworkUtility.swift in Sources */,
 				212CF5021DF815AD00EAB2EE /* BusListViewController.swift in Sources */,
+				212A052D1DF9C4A4003423F7 /* BusDetailViewController.swift in Sources */,
 				212CF5071DF828E700EAB2EE /* BusTableViewCell.swift in Sources */,
-				212CF5091DF8401F00EAB2EE /* BusDetailViewController.swift in Sources */,
 				212A052B1DF9C39B003423F7 /* ViewController.swift in Sources */,
 				212AB5251DF5E65D006F16CC /* BusStop.swift in Sources */,
 				212208711DF7172D003BE293 /* LocationFetcher.swift in Sources */,
