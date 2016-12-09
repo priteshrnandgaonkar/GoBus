@@ -48,7 +48,13 @@ class BusListViewController: UIViewController {
                 guard let buses = [Bus].from(jsonArray: array) else {
                     return
                 }
-                weakSelf.updateTable(with: buses)
+                if buses.count <= 0 {
+                    let alertController = Utility.getAlertViewController(withTitle: "GoBus", message: "There are no buses passing from the selected bus stop, Please try using different bus stops", buttonTitle: "Ok")
+                    weakSelf.present(alertController, animated: true, completion: nil)
+                }
+                else {
+                    weakSelf.updateTable(with: buses)
+                }
             case .failure(let error):
                 guard let weakBusStop = busStop else {
                     return

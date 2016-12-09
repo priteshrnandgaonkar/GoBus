@@ -50,6 +50,10 @@ class BusDetailViewController: UIViewController {
             }
             switch result {
             case .success(let route):
+                if route.count <= 0 {
+                    let alertController = Utility.getAlertViewController(withTitle: "GoBus", message: "No route information is available, Pls try other bus", buttonTitle: "Ok")
+                    weakSelf.present(alertController, animated: true, completion: nil)
+                }
                 weakSelf.bus.route = route
                 weakSelf.updateMapWithRoutes()
             case .failure(let error):
