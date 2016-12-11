@@ -12,8 +12,8 @@ import MapKit
 import SVProgressHUD
 
 class ViewController: UIViewController {
-
-    var currentLocation = CLLocationCoordinate2D(latitude: 24.4702, longitude: 54.3726)
+    
+    var currentLocation = CLLocationCoordinate2D(latitude: 24.432281, longitude: 54.41391) // For Debug purpose
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -50,15 +50,26 @@ class ViewController: UIViewController {
         dropPin.coordinate = coordinate
         dropPin.title = "You are here"
         mapView.addAnnotation(dropPin)
-        
+
+        SVProgressHUD.show(withStatus: "Fetch Nearby Bustops...")
+
         getNearbyBusStops(from: coordinate, with: { [weak self] result in
+            
+            SVProgressHUD.dismiss()
             
             guard let weakSelf = self else {
                 return
             }
             switch result {
             case .success(let busStops):
-                weakSelf.mapView.showAnnotations(busStops, animated: true)
+                
+                if busStops.count <= 0 {
+                    let alertController = Utility.getAlertViewController(withTitle: "GoBus", message: "There are no bus stops around you, Please move around and try using GoBus", buttonTitle: "Ok")
+                    weakSelf.present(alertController, animated: true, completion: nil)
+                }
+                else {
+                    weakSelf.mapView.showAnnotations(busStops, animated: true)
+                }
                 
             case .failure(let error):
                 weakSelf.handle(error: error, withRetryBlock: { weakSelf.updateMapWithBusStops(at: weakSelf.currentLocation)})
@@ -68,7 +79,7 @@ class ViewController: UIViewController {
     
     func getNearbyBusStops(from coordinate: CLLocationCoordinate2D, with completion:@escaping (Result<[BusStop], NetworkError>) -> ()) {
         
-        let url = Constants.baseUrl + Constants.fetchBusStopsApiPath + "?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=500"
+        let url = Constants.baseUrl + Constants.fetchBusStopsApiPath + "?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&radius=1000"
         NetworkUtility.getJSONArray(url: url, withCompletion: { (result: Result<[JSON], NetworkError>) in
             
             switch result {

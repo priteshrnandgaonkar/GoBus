@@ -19,7 +19,7 @@ protocol ErrorHandling {
 }
 
 struct Utility {
-    static func showAlertViewController(withTitle title: String, message: String?, buttonTitle: String, cancelButtonTitle: String, buttonAction: @escaping (()->())) -> UIAlertController {
+    static func getAlertViewController(withTitle title: String, message: String?, buttonTitle: String, cancelButtonTitle: String, buttonAction: @escaping (()->())) -> UIAlertController {
         
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -29,6 +29,17 @@ struct Utility {
         controller.addAction(cancelAction)
         controller.addAction(action)
 
+        return controller
+    }
+    
+    static func getAlertViewController(withTitle title: String, message: String?, buttonTitle: String) -> UIAlertController {
+        
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: buttonTitle, style: .default)
+        
+        controller.addAction(action)
+        
         return controller
     }
 }
@@ -44,7 +55,7 @@ extension UIViewController: ErrorHandling {
     
     func handle<T : ErrorMessage>(error: T?, withRetryBlock retryBlock: @escaping () -> ()) {
         let message = error?.errorMessage
-        let controller = Utility.showAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { retryBlock() })
+        let controller = Utility.getAlertViewController(withTitle: "GoBus", message: message, buttonTitle: "Retry", cancelButtonTitle: "Cancel", buttonAction: { retryBlock() })
         present(controller, animated: true, completion: nil)
  
     }
